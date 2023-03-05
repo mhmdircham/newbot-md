@@ -1,0 +1,37 @@
+{
+  "menu": {
+    "cmd": "menu",
+    "timestamp": 1677981733952,
+    "total": 4,
+    "success": 4,
+    "failed": 0
+  },
+  "quotesanime": {
+    "cmd": "quotesanime",
+    "timestamp": 1677981647459,
+    "total": 1,
+    "success": 1,
+    "failed": 0
+  },
+  "quotes": {
+    "cmd": "quotes",
+    "timestamp": 1677981665296,
+    "total": 1,
+    "success": 1,
+    "failed": 0
+  },
+  "afk": {
+    "cmd": "afk",
+    "timestamp": 1677981711504,
+    "total": 2,
+    "success": 2,
+    "failed": 0
+  },
+  "sticker": {
+    "cmd": "sticker",
+    "timestamp": 1677981766553,
+    "total": 2,
+    "success": 2,
+    "failed": 0
+  }
+}
