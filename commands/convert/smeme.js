@@ -1,9 +1,9 @@
 const {sticker} = require("../../lib/convert");
 const encodeurl = require('encodeurl')
 module.exports = {
-    name: 'smeme',
+    name: 'squote',
     param: '<reply/send image>',
-    cmd: ['smeme'],
+    cmd: ['squote'],
     category: 'converter',
     query: 'Wrong Format\nExample : .smeme Test|oke',
     async handler(m, {conn, text}){
@@ -14,7 +14,7 @@ module.exports = {
             conn.sendReact(m.from, '🕒', m.key);
             const upload = await tool.ugu(await m.quoted.download())
             const packInfo = { packname: `ERDWPE BOT`, author: "erdwpe.com" };
-            const url = await encodeurl(`https://api.memegen.link/images/custom/${t1}/${t2}.png?background=${upload.result.url}`)
+            const url = await encodeurl(`https://api.erdwpe.com/api/maker/quote?text=${t1}&username=${t2}&avatar=${upload.result.url}`)
             const stickerBuff = await sticker(await tool.getBuffer(url), {
                 isImage: true,
                 withPackInfo: true,
@@ -27,7 +27,7 @@ module.exports = {
             conn.sendReact(m.from, '🕒', m.key);
             const upload = await tool.ugu(await m.download())
             const packInfo = { packname: `ERDWPE BOT`, author: "erdwpe.com" };
-            const stickerBuff = await sticker(await tool.getBuffer(`https://api.memegen.link/images/custom/${t1}/${t2}.png?background=${upload.result.url}`), {
+            const stickerBuff = await sticker(await tool.getBuffer(`https://api.erdwpe.com/api/maker/quote?text=${t1}&username=${t2}&avatar=${upload.result.url}`), {
                 isImage: true,
                 withPackInfo: true,
                 packInfo,

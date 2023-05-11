@@ -1,4 +1,5 @@
 const fs = require("fs");
+const { jidNormalizedUser } = require('@adiwajshing/baileys')
 module.exports = {
 	name: "addcommand",
 	param: "<reply code>",
@@ -8,6 +9,7 @@ module.exports = {
 	quoted: true,
 	async handler(m, { conn, text}) {
 	    conn.sendReact(m.from, '🕒', m.key);
+await conn.profile
 		const file = `./commands/${text}`;
 		await fs.writeFileSync(file, m.quoted.text);
 		m.reply("Succsess add command " + text);
