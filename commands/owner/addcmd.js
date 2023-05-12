@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { jidNormalizedUser } = require('@adiwajshing/baileys')
+const { jidNormalizedUser } = require('@whiskeysockets/baileys')
 module.exports = {
 	name: "addcommand",
 	param: "<reply code>",

@@ -7,7 +7,7 @@ const {
   DisconnectReason,
   delay,
   default: makeWASocket,
-} = require("baileys");
+} = require("@whiskeysockets/baileys");
 const pino = require("pino");
 const fs = require("fs");
 const path = require("path");
